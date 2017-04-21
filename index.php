@@ -9,6 +9,6 @@ $dbname = "AdventureWorks";
 // if ($conn->connect_error) {
 //    die("Connection failed: " . $conn->connect_error);
 //} 
-echo $servername."".$username."".$password."".$dbname
+//echo $servername."".$username."".$password."".$dbname
 echo "1";
 echo "hello";  ?>
