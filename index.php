@@ -9,5 +9,5 @@ $con = mysqli($severname,$username,$password,$dbname);
 if($con!=null){echo "success";}else{echo "fail";}
 
 
-
+echo "1";
 echo "hello";  ?>
