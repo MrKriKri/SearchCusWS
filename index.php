@@ -6,7 +6,7 @@ $dbname = "AdventureWorks";
 
 $con = mysqli($severname,$username,$password,$dbname);
 
-if($con!=null){echo "success";}else{echo "fail";}
+//if($con!=null){echo "success";}else{echo "fail";}
 
 
 echo "1";
