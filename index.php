@@ -1,1 +1,1 @@
-<?php header( 'Location: /bot.php' ) ;  ?>
+<?php echo "hello";  ?>
