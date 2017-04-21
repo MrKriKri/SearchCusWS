@@ -1,1 +1,13 @@
-<?php echo "hello";  ?>
+<?php 
+$servername = "codelabdb.database.windows.net";
+$username = "codelab";
+$password = "abc123**";
+$dbname = "AdventureWorks";
+
+$con = mysqli($severname,$username,$password,$dbname);
+
+if($con!=null){echo "success";}
+
+
+
+echo "hello";  ?>
