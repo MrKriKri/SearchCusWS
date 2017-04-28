@@ -1,0 +1,74 @@
+<html>
+<head>
+	<script
+  		src="https://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">
+	</script>
+</head>
+<body>
+
+
+	  <h2>Search Customer</h2>
+	  Search by Country Code
+	  <input type="text" name="txtCountry" value="" id = "Product">
+	  <input type="submit" name="Submit" value="Submit" id="Submit">
+	<div class ="" id = "result">
+
+	</div>
+  <div class = "" id = "result2">
+
+  </div>
+  <div class = "" id = "result3">
+
+  </div>
+  <div class = "" id = "result4">
+
+  </div>
+
+
+	<script type = "text/javascript">
+		var URL = "http://977377searchproducts.azurewebsites.net/api/v1/Search/Products/ProductName/";
+    var URL2 = "http://saleorderdetail.azurewebsites.net/OrderDetail/Search/ProductID/"
+
+
+		$("#Submit").click(function(){
+			URL += $("#Product").val();
+			$.getJSON(URL,function(data){
+        //console.log(data);
+				$.each(data,function(index,item){
+          var row= "<p>"+item.ProductID + "</p>"
+          $("#result").append(row);
+          URL2+=item.ProductID
+          $.getJSON(URL2,function(data2){
+            console.log(data2);
+            $.each(data2,function(index2,item2){
+              var row2 = "<p>  SalesOrderID : "+item2.SalesOrderID+", OrderQty : "+item2.OrderQty+", Price : "+item2.UnitPrice+"  Total :"+(item2.OrderQty*item2.UnitPrice)+"</p>"
+              $("#result2").append(row2);
+              var URL3 = "http://977377saleorderheader.azurewebsites.net/api/v1/salesOrderHeader/SalesOrderID/"
+              URL3 +=item2.SalesOrderID;
+              $.getJSON(URL3,function(data3){
+                console.log(data3);
+                $.each(data3,function(index3,item3){
+                  var row3 = "<p> Customer ID : "+item3.CustomerID+"</p>"
+                  $("#result3").append(row3);
+                  var URL4 = "http://customerservices.azurewebsites.net/Customers/Search/CustomerID/"
+                  URL4 += item3.CustomerID
+                  $.getJSON(URL4,function(data4){
+                    console.log(data4);
+                    $.each(data4,function(index4,item4){
+                      var row4 = "<p> Customer Name :"+item4.FirstName+"</p>"
+                      $("#result4").append(row4);
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+			});
+		});
+	</script>
+
+</body>
+</html>
