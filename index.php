@@ -1,19 +1,16 @@
-<?php 
-$servername = "codelabdb.database.windows.net";
-$username = "codelab";
-$password = "abc123**";
-$dbname = "AdventureWorks";
+<html>
+<head>
+
+</head>
+<body>
+
+<form name="frmMain" method="post" action="">
+	  <h2>Search Customer</h2>
+	  Search by Country Code 
+	  <input type="text" name="txtCountry" value="<?php echo $_POST["txtCountry"];?>">
+	  <input type="submit" name="Submit" value="Submit">
+</form>
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-// if ($conn->connect_error) {
-//    die("Connection failed: " . $conn->connect_error);
-//} 
-//echo $servername."".$username."".$password."".$dbname
-echo "1";
-echo "hello";  ?>
+</body>
+</html>
