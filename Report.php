@@ -86,25 +86,15 @@ input[type=text] {
 </style>
 </head>
 <body>
-
+<center>
 	  Search by Product Name <br>
 	  <input type="text" name="txtCountry" value="" id = "Product">
 		<button class="button" name="Submit" value="Submit" id="Submit">Click</button>
 
 
-	<div class ="" id = "result">
 
-	</div>
-  <div class = "" id = "result2">
 
-  </div>
-  <div class = "" id = "result3">
-
-  </div>
-  <div class = "" id = "result4">
-
-  </div>
-
+<center>
 <br>
 <table>
 	<script type = "text/javascript">
