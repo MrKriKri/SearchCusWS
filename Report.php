@@ -87,7 +87,7 @@ input[type=text] {
 </head>
 <body>
 
-	  Search by Country Code
+	  Search by Product Name <br>
 	  <input type="text" name="txtCountry" value="" id = "Product">
 		<button class="button" name="Submit" value="Submit" id="Submit">Click</button>
 
