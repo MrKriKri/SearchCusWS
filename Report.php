@@ -1,3 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+ <style>
+body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <!-- <li><a class="active" href="#home">หน้าแรก</a></li> -->
+  <li><a class="active"  href="#news">ค้นหาสินค้า</a></li>
+
+</ul>
+
+<div style="margin-left:10%;padding:1px 16px;height:1000px;">
+  <h2>SEARCH PRODUCT</h2>
 <html>
 <head>
 	<script
@@ -8,11 +58,13 @@
 
 	<style>
 table, th, td {
-    border: 1px solid pink;
+
+    border: 1px solid gray;
+    /*border-radius: 4px;*/
 }
 
 button {
-    background-color:rgba(255, 0, 0, 0.2); /* Green */
+    background-color:green; /* Green */
     border: none;
     color: white;
     padding: 8px  10px;
@@ -28,15 +80,13 @@ input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 2px solid pink;
-    border-radius: 4px;
+    border: 1px solid gray;
+    /*border-radius: 4px;*/
 }
 </style>
 </head>
 <body>
 
-
-	  <h2>Search Customer</h2>
 	  Search by Country Code
 	  <input type="text" name="txtCountry" value="" id = "Product">
 		<button class="button" name="Submit" value="Submit" id="Submit">Click</button>
@@ -104,5 +154,11 @@ input[type=text] {
 		});
 	</script>
 </table>
+</body>
+</html>
+
+
+</div>
+
 </body>
 </html>
